@@ -4,18 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 	int x=0;
-	Animal dog = new Animal();
-	dog.species ="dog";
-	dog.name="Reksio";
-	dog.weight=8.0;
+	Animal dog = new Animal("dog",3.2,"Milek");
+
 	dog.feed();
 	dog.feed();
 
-	Phone iPhone = new Phone();
-	iPhone.screenSize=4.5;
-	iPhone.producer="Apple";
-	iPhone.model="6S";
-	iPhone.operationSystem="iOs";
+	Phone iPhone = new Phone("Apple","6s",4.5,"iOS");
+
 
 	Human me = new Human();
 	me.firstName="Hubert";
