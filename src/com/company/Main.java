@@ -31,6 +31,9 @@ public class Main {
 	me.pet=dog;
 	me.pet.takeForAWalk();
 	me.pet.feed();
+	Car mineCar=new Car("X","Tesla");
+	me.Automobile=mineCar;
+	System.out.println("My Car is "+mineCar.producer+" "+mineCar.model);
 	//System.out.println("Zwierzak ma na imię "+ me.pet.name);
     }
 }
