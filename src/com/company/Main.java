@@ -1,5 +1,6 @@
 package com.company;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,5 +18,9 @@ public class Main {
 	me.lastName="Marchwat";
 	me.pet=dog;
 	System.out.println("Zwierzak ma na imię "+ me.pet.name);
+	System.out.println(me.getSalary()+"zł");
+	me.setSalary(-41.4);
+	me.setSalary(15.0);
+	System.out.println(me.getSalary()+"zł");
     }
 }
