@@ -7,7 +7,7 @@ public class Human {
     String phone;
     Animal pet;
     private Double salary=2999.0;
-
+    public Car Automobile;
     double getSalary(){
         System.out.println(java.time.LocalDateTime.now()+"-Date");
         System.out.println("before:"+salary);

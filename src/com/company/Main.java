@@ -34,6 +34,10 @@ public class Main {
 	Car mineCar=new Car("X","Tesla");
 	me.Automobile=mineCar;
 	System.out.println("My Car is "+mineCar.producer+" "+mineCar.model);
+	System.out.println(me.getSalary()+"zł");
+	me.setSalary(-41.4);
+	me.setSalary(15.0);
+	System.out.println(me.getSalary()+"zł");
 	//System.out.println("Zwierzak ma na imię "+ me.pet.name);
     }
 }
