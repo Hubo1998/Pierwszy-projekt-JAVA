@@ -46,6 +46,15 @@ public class Main {
 	me.setCar(car1);
 	//System.out.println(me.getCar());
 	me.setCar(car2);
+	if (car1==car2){
+		System.out.println("1");
+	}else{
+		System.out.println("0");
+	}
+	System.out.println(car1);
+	System.out.println(car2);
+	System.out.println(me);
+	System.out.println(dog);
     }
 
 }

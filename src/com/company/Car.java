@@ -10,4 +10,7 @@ public class Car {
         this.model=model;
         this.price=price;
     }
+    public String toString(){
+        return model+" "+producer+" "+price;
+    }
 }

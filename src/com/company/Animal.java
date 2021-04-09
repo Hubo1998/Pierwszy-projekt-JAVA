@@ -3,6 +3,9 @@ package com.company;
 import java.io.File;
 
 public class Animal {
+    public String toString(){
+        return name+" "+weight;
+    }
 
 
     final public String species;

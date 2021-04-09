@@ -1,23 +1,27 @@
 package com.company;
 import java.time.LocalDateTime;
 
-public class Human {
+public class Human {;
+    public String toString(){
+        return firstName+" "+lastName;
+    }
     String firstName;
     String lastName;
     String phone;
     Animal pet;
     private Double salary=2999.0;
-    private Car Automobile;
+    private Car automobile;
 
     public Car getCar(){
-        return this.Automobile;
+        return this.automobile;
     }
-    void setCar(Car Automobile){
-        if (Automobile.price< salary){
+    void setCar(Car automobile){
+        if (automobile.price< salary){
             System.out.println("Kupiony za gotówkę");
-            this.Automobile=Automobile;
-        } else if(Automobile.price/12<salary) {
+            this.automobile=automobile;
+        } else if(automobile.price/12<salary) {
             System.out.println("Kupiony na kredyt");
+            this.automobile=automobile;
         } else{
             System.out.println("Studia Panie");
         }
