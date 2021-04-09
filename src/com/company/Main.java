@@ -31,13 +31,21 @@ public class Main {
 	me.pet=dog;
 	me.pet.takeForAWalk();
 	me.pet.feed();
-	Car mineCar=new Car("X","Tesla");
-	me.Automobile=mineCar;
-	System.out.println("My Car is "+mineCar.producer+" "+mineCar.model);
+	//Car mineCar=new Car("X","Tesla");
+	//me.Automobile=mineCar;
+	//System.out.println("My Car is "+mineCar.producer+" "+mineCar.model);
 	System.out.println(me.getSalary()+"zł");
 	me.setSalary(-41.4);
-	me.setSalary(15.0);
+	me.setSalary(15000.0);
 	System.out.println(me.getSalary()+"zł");
+
 	//System.out.println("Zwierzak ma na imię "+ me.pet.name);
+	System.out.println(me.getCar());
+	Car car1= new Car ("Ibiza","Seat",999.0);
+	Car car2=new Car("Leon", "Seat",20000.0);
+	me.setCar(car1);
+	//System.out.println(me.getCar());
+	me.setCar(car2);
     }
+
 }

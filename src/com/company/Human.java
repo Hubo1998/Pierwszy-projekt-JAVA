@@ -7,7 +7,22 @@ public class Human {
     String phone;
     Animal pet;
     private Double salary=2999.0;
-    public Car Automobile;
+    private Car Automobile;
+
+    public Car getCar(){
+        return this.Automobile;
+    }
+    void setCar(Car Automobile){
+        if (Automobile.price< salary){
+            System.out.println("Kupiony za gotówkę");
+            this.Automobile=Automobile;
+        } else if(Automobile.price/12<salary) {
+            System.out.println("Kupiony na kredyt");
+        } else{
+            System.out.println("Studia Panie");
+        }
+
+    }
     double getSalary(){
         System.out.println(java.time.LocalDateTime.now()+"-Date");
         System.out.println("before:"+salary);

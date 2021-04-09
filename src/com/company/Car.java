@@ -3,10 +3,11 @@ package com.company;
 public class Car {
     final String model;
     final String producer;
-    public String Automobile;
+    public Double price;
 
-    public Car(String model, String producer){
+    public Car(String model, String producer, Double price){
         this.producer=producer;
         this.model=model;
+        this.price=price;
     }
 }
