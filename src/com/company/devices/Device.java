@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Device {
+public abstract class Device {
     final public String model;
     final public String producer;
     final public Integer yearOfProduction;
@@ -14,7 +14,5 @@ public class Device {
     public String toString(){
         return model+" "+producer+" "+yearOfProduction;
     }
-    public void turnOn(){
-        System.out.println("wł/wył");
-        }
+    abstract public void turnOn();
     }

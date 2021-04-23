@@ -62,6 +62,8 @@ public class Main {
 		iPhone.turnOn();
 		System.out.println(telephone.producer);
 		System.out.println(car1.model);
+		telephone.turnOn();
+		car1.turnOn();
 	}
 
 }

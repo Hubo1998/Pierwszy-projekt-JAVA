@@ -7,4 +7,9 @@ public class Car extends Device {
         super(producer,model,yearOfProduction);
         this.price=price;
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Przekręcam kluczyka");
+    }
 }
