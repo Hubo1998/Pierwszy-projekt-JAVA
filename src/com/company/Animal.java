@@ -53,7 +53,7 @@ public class Animal {
         if (weight>=0){
             weight-=DEFAULT_WALK_WEIGHT;
             System.out.println("Thx for a walk, now my weight is "+weight);
-            if(weight<=0){
+            if(weight<0){
                 System.out.println("Ehhhh Human... i'm too thin");
             }
         }

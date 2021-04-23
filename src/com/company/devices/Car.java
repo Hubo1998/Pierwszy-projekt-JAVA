@@ -1,16 +1,10 @@
 package com.company.devices;
 
-public class Car {
-    final String model;
-    final String producer;
+public class Car extends Device {
     public Double price;
 
-    public Car(String model, String producer, Double price){
-        this.producer=producer;
-        this.model=model;
+    public Car(String model, String producer, Double price,Integer yearOfProduction){
+        super(producer,model,yearOfProduction);
         this.price=price;
-    }
-    public String toString(){
-        return model+" "+producer+" "+price;
     }
 }
