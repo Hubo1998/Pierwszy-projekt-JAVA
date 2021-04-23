@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements Sellable {
     public String toString(){
         return name+" "+weight;
     }
@@ -60,5 +60,21 @@ public class Animal {
         else {
             System.out.println("i can't walk when i'm dead Human");
         }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.pet!=this){
+            System.out.println("Nie można sprzedać czegoś czego się nie ma");
+        } else if(buyer.cash<price){
+            System.out.println("Nie stać Cię");
+        } else {
+            seller.cash+=price;
+            buyer.cash-=price;
+            buyer.pet= seller.pet;
+            seller.pet=null;
+            System.out.println("Transakcja przebiegła pomyślnie");
+        }
+
     }
 }

@@ -64,6 +64,15 @@ public class Main {
 		System.out.println(car1.model);
 		telephone.turnOn();
 		car1.turnOn();
+		Human me1=new Human();
+		me1.pet=new Animal("dog");
+		me1.cash=0.0;
+
+		Human me2=new Human();
+		me2.cash=2000.0;
+		me1.pet.sell(me1,me2,20000.0);
+		me1.phone=new Phone("Apple","Ip 6s",5.0,"iOS",2016);
+		me1.phone.sell(me1,me2,200.0);
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.company;
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Human {;
     public String toString(){
@@ -7,10 +8,11 @@ public class Human {;
     }
     String firstName;
     String lastName;
-    String phone;
+    public Phone phone;
     Animal pet;
     private Double salary=2999.0;
-    private Car automobile;
+    public Car automobile;
+    public Double cash;
 
     public Car getCar(){
         return this.automobile;
