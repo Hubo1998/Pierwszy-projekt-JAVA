@@ -1,8 +1,11 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
+import com.company.Sellable;
 
 import java.io.File;
 
-public class Animal implements Sellable {
+public abstract class Animal implements Sellable, Feedable {
     public String toString(){
         return name+" "+weight;
     }
@@ -39,7 +42,7 @@ public class Animal implements Sellable {
 
 
     }
-    void feed(){
+    public void feed(){
         if(weight>=0){
             weight+=DEFAULT_FOOD_WEIGHT;
             System.out.println("Thx human, now my weight is "+weight);
@@ -49,7 +52,7 @@ public class Animal implements Sellable {
         }
 
     }
-    void takeForAWalk(){
+    public void takeForAWalk(){
         if (weight>=0){
             weight-=DEFAULT_WALK_WEIGHT;
             System.out.println("Thx for a walk, now my weight is "+weight);

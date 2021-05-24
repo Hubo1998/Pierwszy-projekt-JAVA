@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -7,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 		int x = 0;
-		Animal dog = new Animal("dog");
+		Pet dog = new Pet("dog");
 
 		dog.feed();
 		dog.feed();
@@ -65,7 +67,7 @@ public class Main {
 		telephone.turnOn();
 		car1.turnOn();
 		Human me1=new Human();
-		me1.pet=new Animal("dog");
+		me1.pet=new Pet("dog");
 		me1.cash=0.0;
 
 		Human me2=new Human();

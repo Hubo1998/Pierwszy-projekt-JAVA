@@ -1,4 +1,6 @@
 package com.company;
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -9,7 +11,7 @@ public class Human {;
     String firstName;
     String lastName;
     public Phone phone;
-    Animal pet;
+    public Pet pet;
     private Double salary=2999.0;
     public Car automobile;
     public Double cash;
