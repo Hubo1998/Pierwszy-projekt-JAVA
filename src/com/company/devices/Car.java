@@ -3,7 +3,7 @@ package com.company.devices;
 import com.company.Human;
 import com.company.Sellable;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
     public Double price;
 
     public Car(String model, String producer, Double price,Integer yearOfProduction){
@@ -30,4 +30,5 @@ public class Car extends Device implements Sellable {
             System.out.println("Transakcja przebiegła pomyślnie");
         }
     }
+    abstract public void refuel();
 }

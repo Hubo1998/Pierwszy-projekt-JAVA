@@ -6,6 +6,9 @@ import com.company.Sellable;
 public class Phone extends Device implements Sellable {
     final Double screenSize;
     final String operationSystem;
+    final static public String defaultAdr="192.168.0.1";
+    final static public String defaultpro="255.255.255.255";
+    final static public String defaultname="defaultversionname";
 
     public Phone(String producer, String model, Double screenSize, String operationSystem, Integer yearOfProduction) {
         super(producer,model,yearOfProduction);
@@ -32,4 +35,7 @@ public class Phone extends Device implements Sellable {
             System.out.println("Transakcja przebiegła pomyślnie");
         }
     }
+    //public void installAnnApp(){
+
+    //}
 }

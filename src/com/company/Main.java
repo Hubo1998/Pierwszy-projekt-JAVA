@@ -2,8 +2,7 @@ package com.company;
 
 import com.company.creatures.Animal;
 import com.company.creatures.Pet;
-import com.company.devices.Car;
-import com.company.devices.Phone;
+import com.company.devices.*;
 
 public class Main {
 
@@ -46,8 +45,8 @@ public class Main {
 
 		//System.out.println("Zwierzak ma na imię "+ me.pet.name);
 		System.out.println(me.getCar());
-		Car car1 = new Car("Ibiza", "Seat", 999.0, 2004);
-		Car car2 = new Car("Leon", "Seat", 20000.0, 2001);
+		Car car1 = new Diesel("Ibiza", "Seat", 999.0, 2004);
+		Car car2 = new LPG("Leon", "Seat", 20000.0, 2001);
 		me.setCar(car1);
 		//System.out.println(me.getCar());
 		me.setCar(car2);
@@ -75,6 +74,10 @@ public class Main {
 		me1.pet.sell(me1,me2,20000.0);
 		me1.phone=new Phone("Apple","Ip 6s",5.0,"iOS",2016);
 		me1.phone.sell(me1,me2,200.0);
+		car1.refuel();
+		car2.refuel();
+		Car car3=new Electric("X","Tesla",999999.0,2020);
+		car3.refuel();
 	}
 
 }
