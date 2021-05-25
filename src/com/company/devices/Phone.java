@@ -3,12 +3,16 @@ package com.company.devices;
 import com.company.Human;
 import com.company.Sellable;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
 public class Phone extends Device implements Sellable {
     final Double screenSize;
     final String operationSystem;
-    final static public String defaultAdr="192.168.0.1";
-    final static public String defaultpro="255.255.255.255";
-    final static public String defaultname="defaultversionname";
+    final static public String DEFAULT_SERVER_ADDRESS="appserver.com";
+    final static public String DEFAULT_VERSION="latest";
+    final static public String DEFAULT_PROTOCOL="https";
 
     public Phone(String producer, String model, Double screenSize, String operationSystem, Integer yearOfProduction) {
         super(producer,model,yearOfProduction);
@@ -35,7 +39,32 @@ public class Phone extends Device implements Sellable {
             System.out.println("Transakcja przebiegła pomyślnie");
         }
     }
-    //public void installAnnApp(){
+    public void installAnApp(String appName){ this.installAnApp(appName,"latest");}
 
-    //}
+    public void installAnApp(String appName,String version){
+        this.installAnApp(appName,version,DEFAULT_SERVER_ADDRESS);
+    }
+
+    public void installAnApp(String appName, String version, String address){
+        try {
+            URL url = new URL("https",address,appName+"_"+version);
+            this.installAnApp(url);
+        } catch(MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void installAnApp(URL url){
+        System.out.println("pobieram aplikację "+url.getFile()+" z adresu "+url.getHost());
+        System.out.println("instaluję aplikację "+url.getFile());
+    }
+    public void installAnApp(List<String> appNames){
+        for (String appName:appNames){
+            this.installAnApp(appName);
+        }
+    }
+    public void installAnApp(String[] appNames){
+        for (String appName:appNames){
+            this.installAnApp(appName);
+        }
+    }
 }
